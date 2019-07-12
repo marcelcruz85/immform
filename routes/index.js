@@ -12,8 +12,6 @@ app.use(express.json());
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-
-  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
   res.render('index', { title: 'Express' });
 });
 
@@ -81,7 +79,7 @@ router.post('/ar-11', (req, res, next) => {
   // res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization');
   // res.json(req.body);
   pdftk
-      .input('/Users/marcel/Projects/immTest/ar-11_editable.pdf')
+      .input('/Users/marcel/Projects/easyForm/client/src/assets/g-28_editable.pdf')
       .fillForm(req.body)
       .flatten()
       .output('/Users/marcel/Projects/immTest/out.pdf')
